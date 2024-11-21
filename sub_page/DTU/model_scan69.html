@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RockUniverse: Building the 3D Internet">
+  <meta name="keywords" content="RockUniverse">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--for thumbnail-->
+  <!-- <meta property="og:image" content="./assets/RockUniverse/logo.webp">
+  <meta property="og:url" content="https://youmi-zym.github.io/projects/RockUniverse">
+  <meta property="og:description" content="Products for RockUniverse"> -->
+  <title>RockUniverse</title>
+
+  <!-- Import the component -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+  <script defer src="https://web3dsurvey.com/collector.js"></script>
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-169901325-1', { 'storage': 'none' });
+    ga('set', 'referrer', document.referrer.split('?')[0]);
+    ga('set', 'anonymizeIp', true);
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <base href="../../">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <p>
+        <a href="../index.html">Return</a>
+      </p>
+      <!-- <div class="columns is-centered">
+        <div class="column is-7 has-text-centered">
+          <img src="media/nice-slam/nice-slam-logo2.png" alt="NICE-SLAM"/>
+        </div>
+      </div> -->
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title"><img src="media/nice-slam/like.png" width="90">NICE-SLAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>Neural Implicit Scalable Encoding for SLAM</h1> -->
+          <h1 class="title is-1 publication-title">Scan69</h1>
+          <!--div class="column is-full_width">
+            <h2 class="title is-4">Object Indoor Outdoor</h2>
+          </div-->
+
+        </div>
+        
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="sidebar" id="sidenav"></div>
+  <div id="toggle"></div>
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class=" is-four-fifths">
+        <hr>
+        <!--h2 class="title is-3">Object</h2>
+        <br-->
+        <!-- <h2 class="title is-3">Scan24</h2> -->
+        <br>
+        <br>  
+  
+        <div class="wrapper">
+  
+            <div id="product-featured-box">
+
+            <!-- Use it like any other HTML element -->
+            <base href="../../">
+            <model-viewer alt="scan69" src="assets/RockUniverse/DTU/scan69.glb" poster="assets/RockUniverse/DTU/scan69.webp"  shadow-intensity="1" camera-controls touch-action="pan-y"
+            style="width: 500px; height: 500px;"></model-viewer>
+            </div>
+
+          <style>
+            /* This keeps child nodes hidden while the element loads */
+            :not(:defined) > * {
+              display: none;
+            }
+
+            #product-featured-box {
+              display: grid;
+              grid-template-columns: 1fr;
+            }
+
+            model-viewer {
+              background-color: #eee;
+              overflow-x: hidden;
+            }
+
+            #ar-button:active {
+              background-color: #E8EAED;
+            }
+
+            #ar-button:focus {
+              outline: none;
+            }
+
+            #ar-button:focus-visible {
+              outline: 1px solid #4285f4;
+            }
+
+            @keyframes circle {
+              from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
+              to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
+            }
+
+            @keyframes elongate {
+              from { transform: translateX(100px); }
+              to   { transform: translateX(-100px); }
+            }
+
+            model-viewer > #ar-prompt {
+              position: absolute;
+              left: 50%;
+              bottom: 175px;
+              animation: elongate 2s infinite ease-in-out alternate;
+              display: none;
+            }
+
+            model-viewer[ar-status="session-started"] > #ar-prompt {
+              display: block;
+            }
+
+            model-viewer > #ar-prompt > img {
+              animation: circle 4s linear infinite;
+            }
+
+            model-viewer > #ar-failure {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+              bottom: 175px;
+              display: none;
+            }
+
+            model-viewer[ar-tracking="not-tracking"] > #ar-failure {
+              display: block;
+            }
+
+            .slider {
+              width: 100%;
+              text-align: center;
+              overflow: hidden;
+              position: absolute;
+              bottom: 16px;
+            }
+
+            .slides {
+              display: flex;
+              overflow-x: auto;
+              scroll-snap-type: x mandatory;
+              scroll-behavior: smooth;
+              -webkit-overflow-scrolling: touch;
+            }
+
+            .slide {
+              scroll-snap-align: start;
+              flex-shrink: 0;
+              width: 20px;
+              height: 20px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: #fff;
+              margin-right: 5px;
+              border-radius: 5px;
+              border: none;
+              display: flex;
+            }
+
+            .slide.selected {
+              border: 2px solid #4285f4;
+            }
+
+            .slide:focus {
+              outline: none;
+            }
+
+            .slide:focus-visible {
+              outline: 1px solid #4285f4;
+            }
+
+          </style>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is developed based on <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
